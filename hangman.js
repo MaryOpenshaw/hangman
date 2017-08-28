@@ -23,7 +23,7 @@ function get() {
 let aWord = [];
 
 function showWord() {
-    for (let a = 0; a < word.length-1; a++) {
+    for (let a = 0; a < word.length - 1; a++) {
         aWord.push('_ ');
     }
 
@@ -32,117 +32,81 @@ function showWord() {
     }
 }
 
-let counter = 7;
+
 let d;
+let counter;
+let val;
+
 function game() {
-    
+
     let letter = document.getElementById('letter').value;
     let showMessage = '';
 
     console.log(letter);
     console.log(' ')
-
+    let counter = 7;
 
     for (let d = 0; d < word.length; d++) {
-        // console.log(d);
+
         if (word[d] === letter) {
             aWord[d] = letter;
             document.getElementById('guessed Letters').innerHTML = aWord.join(' ');
+            let val = true;
         }
-
-/*
         if (word[d] !== letter) {
+            // if (counter !==0) {
             counter--;
-            console.log (counter);
+            //counter = counter - 1;
+            // }
+            /*
+            console.log(counter );
+            console.log("A"); */
+
         }
-
-       // document.getElementById('guessed Letters').innerHTML = aWord.join(' ');
-       */
-    }
-}
-
-
-/*
-
-if (letter.length !== 1) {
-}
-else {
-    let d = 0;
-    if (word[d] === letter) {
-        aWord[d] = letter;
-        showMessage = 'yes ' + letter + ' this letter is in the word';
-    }
-    document.getElementById('guessed Letters').innerHTML = aWord.join(' ');
-}
-
-
-
-
-}
-/*
-    let lettersLeft = 0;
-    for (d = 0; d < word.length; d++) {
-        if (aword[d] === '_ ') {
-            lettersLeft += 1;
-        }
-    }
-
-	if (lettersLeft == 0) {
-        showMessage = 'YES! You guessed the word';
-    }
-
-    if (showMessage === '') {
-        showMessage = 'Sorry, no ' +letter;
-    }
-    
-    // Update the puzzle
-    //document.getElementById("answer").innerHTML = answerArray.join(" ");
-    document.getElementById('guessed Letters').innerHTML = aWord.join(' ');
-    // Lend a hand by clearing out their last guess
-    document.getElementById('letter').value = '';
-}
-
-
-/*
-
-for (let d = 0; d < word.length; d++) {
-    // console.log(d);
-    if (word[d] === letter) {
-        aWord[d] = letter;
-    }
-    if (word[d] !== letter) {
+        // let val = false;
+        //if(val=false) {
         counter--;
+        //}
+        // counter= counter-1; 
+    }
+    // counter --;
+
+    console.log(counter);
+    //rope
+    if (counter === 6) {
+
+        document.getElementById('hangman').src = "./img/theHangman1.png";
+    }
+    //head
+    if (counter === 5) {
+
+        document.getElementById('hangman').src = "./img/theHangman2.png";
+    }
+    //body
+    if (counter === 4) {
+
+        document.getElementById('hangman').src = "./img/theHangman3.png";
+    }
+    //left arm
+    if (counter === 3) {
+
+        document.getElementById('hangman').src = "./img/theHangman4.png";
+    }
+
+    //rght arm
+    if (counter === 2) {
+        document.getElementById('hangman').src = "./img/theHangman5.png";
+    }
+
+    //rght leg
+    if (counter === 1) {
+        document.getElementById('hangman').src = "./img/theHangman6.png";
+
+    }
+
+    //rght leg
+    if (counter = 0) {
+        document.getElementById('hangman').src = "./img/theHangman7.png";
     }
 }
-}
-/*
-    for (e = 0; e < word.length; e++){  
-        if (word[d] === '_') {
 
-        }
-    }
-}
-       // aWord.join(letter);
-       // aWord.push(letter);  
-
-       // aWord.push(letter);
-/*
-        if (letter === word[d]) {
-            for (let a = 0; a < word.length; a++) {
-                aWord.push(letter);
-            }
-
-        }
-        */
-  //  }
-    /* for (let f = 0; f < aWord.length; f++) {
-     }
-    
-    indexOf(d) === indexOf(f);
-     /*
-     if(d === aWord[f] ) {
-         aWord.push(letter);
-     }
- */
-
-//}
