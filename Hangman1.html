@@ -1,0 +1,64 @@
+<!DOCTTYPE html>
+<html>
+<script src="hangman.js">
+
+</script>
+
+<head>
+    <title> Hangman Game</title>
+</head>
+
+<body>
+    <div>
+        <h1>Welcome to the hangman game</h1>
+    </div>
+    <div>
+        <p>
+            <div>
+                <button onclick=get()> get word list </button>
+            </div>
+        </p>
+        <p>
+            <button onclick=showWord()> show word length </button>
+        </p>
+        <p>
+            <!--
+            <div>
+                <button onclick=getEasy() id="easy"> easy </button>
+            </div>
+            <div>
+                <button onclick=getMedium() id="medium">medium</button>
+            </div>
+            <div>
+                <button onlcick=choseHard() id="hard">hard</button>
+            </div>
+        -->
+        </p>
+    </div>
+    <div id="the word">
+
+    </div>
+    <div>
+        <p>
+            enter a single letter in lowercase
+            <input type="text" id="letter">
+
+            <button onclick=game() type="button"> submit letter </button>
+
+        </p>
+    </div>
+<p>
+<div id ="the hangman">
+    
+</div>
+</p>
+<p>
+    <div id="guessed Letters">
+    </div>
+</p>
+
+
+
+</body>
+
+</html>
