@@ -65,7 +65,7 @@ function game() {
         }
         // let val = false;
         //if(val=false) {
-        counter--;
+      //  counter--;
         //}
         // counter= counter-1; 
     }
